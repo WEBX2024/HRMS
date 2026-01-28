@@ -1,0 +1,30 @@
+# Core Django
+Django==5.0.1
+djangorestframework==3.14.0
+django-cors-headers==4.3.1
+
+# Database
+# psycopg2-binary will be needed for PostgreSQL production deployment
+# For now, using SQLite for development
+
+# Authentication & Security
+PyJWT==2.8.0
+djangorestframework-simplejwt==5.3.1
+python-decouple==3.8
+
+# Utilities
+python-dateutil==2.8.2
+pytz==2024.1
+Faker==22.6.0
+
+# Development
+django-extensions==3.2.3
+ipython==8.20.0
+
+# Testing
+pytest==7.4.4
+pytest-django==4.7.0
+factory-boy==3.3.0
+
+# API Documentation
+drf-spectacular==0.27.0
