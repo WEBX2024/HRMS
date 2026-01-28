@@ -1,0 +1,269 @@
+@import "tailwindcss";
+
+/* Custom Theme Configuration for Tailwind CSS v4 */
+@theme {
+  /* Primary Color - Terracotta */
+  --color-primary-*: initial;
+  --color-primary-50: #f5e8e6;
+  --color-primary-100: #ebd1cd;
+  --color-primary-200: #d7a39b;
+  --color-primary-300: #c37569;
+  --color-primary-400: #b85042;
+  --color-primary-500: #a03c2f;
+  --color-primary-600: #7d2f25;
+  --color-primary-700: #5a221b;
+  --color-primary-800: #371511;
+  --color-primary-900: #140807;
+  --color-primary: #b85042;
+
+  /* Secondary Color - Sage Green */
+  --color-secondary-*: initial;
+  --color-secondary-50: #f5f7f6;
+  --color-secondary-100: #ebefed;
+  --color-secondary-200: #d7dfdb;
+  --color-secondary-300: #c3cfc9;
+  --color-secondary-400: #a7beae;
+  --color-secondary-500: #8ba896;
+  --color-secondary-600: #6f927e;
+  --color-secondary-700: #577366;
+  --color-secondary-800: #3f544e;
+  --color-secondary-900: #273536;
+  --color-secondary: #a7beae;
+
+  /* Accent Color - Soft Cream */
+  --color-accent-*: initial;
+  --color-accent-50: #fefef9;
+  --color-accent-100: #fcfdf3;
+  --color-accent-200: #f9fbe7;
+  --color-accent-300: #f0f2d9;
+  --color-accent-400: #e7e8d1;
+  --color-accent-500: #d4d6b3;
+  --color-accent-600: #c1c495;
+  --color-accent-700: #aeb277;
+  --color-accent-800: #9ba059;
+  --color-accent-900: #888e3b;
+  --color-accent: #e7e8d1;
+}
+
+/* Import Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap");
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce-subtle {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulse-subtle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Base Styles */
+body {
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Outfit", "Inter", sans-serif;
+}
+
+/* Component Classes */
+.btn {
+  @apply px-6 py-3 rounded-xl font-medium transition-all duration-300 inline-flex items-center justify-center gap-2;
+}
+
+.btn-primary {
+  @apply bg-primary text-white hover:bg-primary-600 active:scale-95;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-white hover:bg-secondary-600 active:scale-95;
+}
+
+.btn-outline {
+  @apply border-2 border-primary text-primary hover:bg-primary hover:text-white active:scale-95;
+}
+
+.btn-ghost {
+  @apply text-neutral-700 hover:bg-neutral-100 active:scale-95;
+}
+
+.card {
+  @apply bg-white rounded-2xl p-6 transition-all duration-300;
+}
+
+.input {
+  @apply w-full px-4 py-3 rounded-xl border-2 border-neutral-200 focus:border-primary outline-none transition-all duration-200;
+}
+
+.badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.badge-primary {
+  @apply bg-primary/10 text-primary-700;
+}
+
+.badge-success {
+  @apply bg-green-100 text-green-700;
+}
+
+/* Animation Classes */
+.animate-fade-in {
+  animation: fade-in 0.5s ease-in-out;
+}
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out;
+}
+.animate-fade-in-down {
+  animation: fade-in-down 0.6s ease-out;
+}
+.animate-slide-in-left {
+  animation: slide-in-left 0.5s ease-out;
+}
+.animate-slide-in-right {
+  animation: slide-in-right 0.5s ease-out;
+}
+.animate-scale-in {
+  animation: scale-in 0.4s ease-out;
+}
+.animate-bounce-subtle {
+  animation: bounce-subtle 2s infinite;
+}
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+.animation-delay-100 {
+  animation-delay: 100ms;
+}
+.animation-delay-200 {
+  animation-delay: 200ms;
+}
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+/* Gradient Backgrounds */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #b85042 0%, #a03c2f 100%);
+}
+
+.bg-gradient-mesh {
+  background:
+    radial-gradient(at 40% 20%, #b85042 0px, transparent 50%),
+    radial-gradient(at 80% 0%, #a7beae 0px, transparent 50%),
+    radial-gradient(at 0% 50%, #e7e8d1 0px, transparent 50%);
+}
+
+/* Shadows */
+.shadow-soft {
+  box-shadow:
+    0 2px 15px -3px rgba(184, 80, 66, 0.1),
+    0 10px 20px -2px rgba(184, 80, 66, 0.05);
+}
+
+.shadow-soft-lg {
+  box-shadow: 0 10px 40px -10px rgba(184, 80, 66, 0.2);
+}
+
+/* Text Effects */
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Loading Spinner */
+.spinner {
+  border: 3px solid rgba(184, 80, 66, 0.1);
+  border-top-color: #b85042;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 0.8s linear infinite;
+}
