@@ -24,6 +24,52 @@ class UserRoles:
         return [cls.SUPER_ADMIN, cls.COMPANY_ADMIN, cls.HR_ADMIN, cls.MANAGER, cls.EMPLOYEE]
 
 
+# Tenant Status
+TENANT_STATUS = [
+    ('PENDING_VERIFICATION', 'Pending Verification'),
+    ('ACTIVE', 'Active'),
+    ('SUSPENDED', 'Suspended'),
+    ('CANCELLED', 'Cancelled'),
+]
+
+
+# User Status
+USER_STATUS = [
+    ('INVITED', 'Invited'),
+    ('ACTIVE', 'Active'),
+    ('SUSPENDED', 'Suspended'),
+    ('EXITED', 'Exited'),
+]
+
+
+# Invitation Status
+INVITATION_STATUS = [
+    ('CREATED', 'Created'),
+    ('SENT', 'Sent'),
+    ('EXPIRED', 'Expired'),
+    ('ACCEPTED', 'Accepted'),
+    ('REVOKED', 'Revoked'),
+]
+
+
+# Login Audit Status
+LOGIN_STATUS = [
+    ('SUCCESS', 'Success'),
+    ('FAILED_INVALID_CREDENTIALS', 'Failed - Invalid Credentials'),
+    ('FAILED_USER_NOT_FOUND', 'Failed - User Not Found'),
+    ('FAILED_INACTIVE', 'Failed - User Inactive'),
+    ('FAILED_SUSPENDED', 'Failed - User Suspended'),
+    ('FAILED_EXITED', 'Failed - User Exited'),
+    ('FAILED_TENANT_SUSPENDED', 'Failed - Tenant Suspended'),
+    ('FAILED_TENANT_CANCELLED', 'Failed - Tenant Cancelled'),
+    ('FAILED_RATE_LIMIT', 'Failed - Rate Limit Exceeded'),
+]
+
+
+# Subscription Plans (keeping existing)
+SUBSCRIPTION_PLANS = SubscriptionPlans.CHOICES
+
+
 # Employee Status
 class EmployeeStatus:
     ACTIVE = 'ACTIVE'

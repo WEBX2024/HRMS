@@ -45,6 +45,11 @@ INSTALLED_APPS = [
     'apps.payroll',
     'apps.documents',
     'apps.reports',
+    
+    # Authentication & Security
+    'apps.invitations',
+    'apps.permissions',
+    'apps.auth_tokens',
 ]
 
 MIDDLEWARE = [

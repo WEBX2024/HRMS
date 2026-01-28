@@ -241,8 +241,8 @@ export default function LoginPage() {
 
           {/* Register Link */}
           <div className="text-center">
-            <Link href="/auth/register" className="btn btn-outline w-full">
-              Create an Account
+            <Link href="/auth/signup" className="btn btn-outline w-full">
+              Create Company Account
             </Link>
           </div>
         </div>
