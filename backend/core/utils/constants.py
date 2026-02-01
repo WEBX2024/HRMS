@@ -66,9 +66,6 @@ LOGIN_STATUS = [
 ]
 
 
-
-
-
 # Employee Status
 class EmployeeStatus:
     ACTIVE = 'ACTIVE'

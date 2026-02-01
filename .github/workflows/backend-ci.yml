@@ -14,7 +14,7 @@ on:
 
 jobs:
   build-check:
-    name: Build Check
+    name: Build
     runs-on: ubuntu-latest
     defaults:
       run:
