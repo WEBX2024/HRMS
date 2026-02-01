@@ -55,6 +55,7 @@ export class AuthService {
           refresh: refreshToken,
         });
       } catch (error) {
+        console.error(error);
         // Ignore logout errors
       }
     }

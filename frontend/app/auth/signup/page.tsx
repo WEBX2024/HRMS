@@ -145,6 +145,7 @@ export default function SignupPage() {
         setError(data.message || "Signup failed. Please try again.");
       }
     } catch (err) {
+      console.error(err);
       setError("Network error. Please check your connection and try again.");
     } finally {
       setLoading(false);

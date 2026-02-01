@@ -38,6 +38,7 @@ export default function ForgotPasswordPage() {
         );
       }
     } catch (err) {
+      console.error(err);
       setError("Network error. Please check your connection and try again.");
     } finally {
       setLoading(false);
@@ -69,7 +70,7 @@ export default function ForgotPasswordPage() {
                   Forgot Password?
                 </h1>
                 <p className="text-neutral-600">
-                  No worries! Enter your email and we'll send you reset
+                  No worries! Enter your email and we will send you reset
                   instructions.
                 </p>
               </div>
@@ -146,11 +147,11 @@ export default function ForgotPasswordPage() {
                 Check Your Email
               </h2>
               <p className="text-neutral-600 mb-6">
-                We've sent password reset instructions to{" "}
+                We have sent password reset instructions to{" "}
                 <strong>{email}</strong>
               </p>
               <p className="text-sm text-neutral-500 mb-8">
-                Didn't receive the email? Check your spam folder or{" "}
+                Did not receive the email? Check your spam folder or{" "}
                 <button
                   onClick={() => setSuccess(false)}
                   className="text-primary font-medium hover:underline"

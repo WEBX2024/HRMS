@@ -89,10 +89,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         success: false,
         error: response.error?.message || "Login failed",
       };
-    } catch (error: any) {
+    } catch (error) {
+      const errorMessage =
+        error instanceof Error ? error.message : "An error occurred";
       return {
         success: false,
-        error: error.message || "An error occurred",
+        error: errorMessage,
       };
     }
   };

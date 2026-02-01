@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /**
  * API Client for HRMS Backend
  */
@@ -75,6 +76,7 @@ class ApiClient {
       this.clearTokens();
       return null;
     } catch (error) {
+      console.error(error);
       this.clearTokens();
       return null;
     }
@@ -83,6 +85,7 @@ class ApiClient {
   /**
    * Make HTTP request
    */
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   private async request<T = any>(
     endpoint: string,
     options: RequestInit = {},
