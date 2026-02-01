@@ -66,8 +66,7 @@ LOGIN_STATUS = [
 ]
 
 
-# Subscription Plans (keeping existing)
-SUBSCRIPTION_PLANS = SubscriptionPlans.CHOICES
+
 
 
 # Employee Status
@@ -194,6 +193,8 @@ class SubscriptionPlans:
         PROFESSIONAL: {'max_employees': 200, 'max_storage_mb': 5000},
         ENTERPRISE: {'max_employees': -1, 'max_storage_mb': -1},  # Unlimited
     }
+
+SUBSCRIPTION_PLANS = SubscriptionPlans.CHOICES
 
 
 # Gender
