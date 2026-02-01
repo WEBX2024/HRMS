@@ -39,6 +39,7 @@ jobs:
 
   lint-check:
     name: Lint 
+    needs: build-check
     runs-on: ubuntu-latest
     defaults:
       run:
